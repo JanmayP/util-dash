@@ -17,7 +17,7 @@ body {
 }
 
 .welcome {
-  color:crimson;
+  color:rgb(1, 255, 192);
   margin: auto;
   text-align: center;
 
@@ -35,4 +35,50 @@ body {
   border-radius: 5px;
   justify-content: center;
   text-align: center;
+}
+
+.notesHead {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.notesBtn {
+  display: inline-block;
+  background: rgb(1, 255, 192);
+  color: black;
+  border: 1px solid black;
+  padding: 10px 20px;
+  margin: -5px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.notesText {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.note {
+  text-align: left;
+  background-color: rgba(216, 216, 216, 0.678);
+  padding: 10px;
+  line-height: 25px;
+}
+
+.note h3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.formBtn {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
 }
