@@ -7,7 +7,6 @@ import Result from './components/calculator/Result'
 import Keypad from './components/calculator/Keypad'
 
 import AddNote from './components/notes/AddNote'
-import Button from './components/notes/Button'
 import Note from './components/notes/Note'
 import NoteHead from './components/notes/NoteHead'
 import Notes from './components/notes/Notes'
@@ -53,6 +52,7 @@ const App = () => {
     compute = result
 
     try {
+      // eslint-disable-next-line
       setResult(eval(compute) || "")
     } catch (e) {
       setResult("error")
@@ -94,18 +94,18 @@ const App = () => {
           {notes.length > 0 ? <Notes notes={notes} onDelete={deleteNote}/> : <p>Add a note! <br></br></p> }
           <hr></hr>
           <br></br>
-          {showForm && <AddNote onAdd={addNote}/>}
+           <AddNote onAdd={addNote}/>
         </div>
         <br></br>
         <div className="widgetCol">
-          <Calculator />
+          <Calculator /><br></br>
           <Result result={result} />
           <Keypad onClick={onClick}/>
         </div>
         <br></br>
         <div className="widgetCol">
           <Info />
-        </div>
+        </div><br></br>
       </div>
     </div>
   );

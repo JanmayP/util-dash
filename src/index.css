@@ -16,11 +16,17 @@ body {
   margin-top: 50px;
 }
 
+
+/* Index page css */
+
 .welcome {
   color:rgb(1, 255, 192);
   margin: auto;
   text-align: center;
+}
 
+h1 {
+  text-align: center;
 }
 
 .widgets {
@@ -30,6 +36,8 @@ body {
 }
 
 .widgetCol {
+  margin: auto;
+  width: 60%;
   padding: 50px;
   border: 1px solid black;
   border-radius: 5px;
@@ -37,10 +45,18 @@ body {
   text-align: center;
 }
 
+/* Note tracker CSS  */
+
 .notesHead {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.notesHead h2{
+  text-align: center;
+  width: 150px;
+  margin: auto;
 }
 
 .notesBtn {
@@ -82,3 +98,29 @@ body {
   border: none;
   border-radius: 5px;
 }
+
+/*  Calculator CSS */
+
+.result {
+  height: 40px;
+  font-size: 30px;
+  background-color: rgb(146, 146, 146);
+  width: 20%;
+  margin: auto;
+  border: 1px solid black;
+}
+
+.button {
+  width:20%;
+  margin: auto;
+  display: block;
+}
+
+button {
+  width: 25%;
+  height: 60px;
+  font-size: 30px;
+  background-color: orange;
+  color: black;
+}
+
