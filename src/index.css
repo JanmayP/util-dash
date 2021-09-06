@@ -2,11 +2,12 @@
   margin: 0;
   padding: 0;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
 
 body {
-  background-color: white;
-  color: black;
+  background: linear-gradient(290deg, #55008a, #4602b3);
   font-family: "Rubik";
 }
 
@@ -16,111 +17,17 @@ body {
   margin-top: 50px;
 }
 
+/* Head container */
 
-/* Index page css */
-
-.welcome {
-  color:rgb(1, 255, 192);
-  margin: auto;
-  text-align: center;
-}
-
-h1 {
-  text-align: center;
-}
-
-.widgets {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around
-}
-
-.widgetCol {
-  margin: auto;
-  width: 60%;
-  padding: 50px;
-  border: 1px solid black;
-  border-radius: 5px;
-  justify-content: center;
-  text-align: center;
-}
-
-/* Note tracker CSS  */
-
-.notesHead {
+.head-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.notesHead h2{
-  text-align: center;
-  width: 150px;
-  margin: auto;
-}
-
-.notesBtn {
-  display: inline-block;
-  background: rgb(1, 255, 192);
-  color: black;
-  border: 1px solid black;
-  padding: 10px 20px;
-  margin: -5px;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 15px;
-  font-family: inherit;
-}
-
-.notesText {
-  margin-top: 20px;
-  text-align: left;
-}
-
-.note {
-  text-align: left;
-  background-color: rgba(216, 216, 216, 0.678);
-  padding: 10px;
-  line-height: 25px;
-}
-
-.note h3 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.formBtn {
-  background-color: black;
+.greeting {
+  font-family: 'Montserrat', sans-serif;
   color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
+  font-size: 40px;
+  text-shadow: 2px 2px black;
 }
-
-/*  Calculator CSS */
-
-.result {
-  height: 40px;
-  font-size: 30px;
-  background-color: rgb(146, 146, 146);
-  width: 20%;
-  margin: auto;
-  border: 1px solid black;
-}
-
-.button {
-  width:20%;
-  margin: auto;
-  display: block;
-}
-
-button {
-  width: 25%;
-  height: 60px;
-  font-size: 30px;
-  background-color: orange;
-  color: black;
-}
-
