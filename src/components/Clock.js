@@ -2,11 +2,19 @@ const Clock = ({ time }) => {
 
   var hours = "";
   var minutes = "";
+  var ampm = "";
 
-  if (time.getHours() < 10) {
-    hours = "0" + time.getHours();
+  hours = time.getHours();
+  if (hours >= 12){
+    ampm = "PM";
   } else {
-    hours = time.getHours();
+    ampm = "AM"
+  }
+
+  hours = (hours % 12);
+  
+  if (hours < 10){
+    hours = "0" + hours;
   }
 
   if (time.getMinutes() < 10) {
@@ -17,7 +25,7 @@ const Clock = ({ time }) => {
 
   return (
     <div>
-      {hours} : {minutes}
+      {hours} : {minutes} {ampm}
     </div>
   )
 }

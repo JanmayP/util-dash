@@ -1,16 +1,43 @@
-Utility Dashboard created in React (WIP)
+# Utility Dashboard created in React (WIP)
 
-How to use: 
+## Purpose
+I wanted to create a single dashboard to easily access all necessary tools from one place rather than having multiple windows open on my desktop. Along the way, I am constantly improving on my React skills. It also has the added benefit of looking cool :)
 
-1. Clone the repository
-2. Execute `npm run build`. This creates a build folder 
-3. Execute `npm install -g serve` if you do not have it installed already 
-4. Execute `serve -s build`. This will run the build in a local server. 
+## Technologies and Methods used
++ React js
++ State Management / React Hooks
++ JavaScript/JSX 
++ Sass for styling 
+
+## Features 
+This dashboard has multiple widgets for different tasks 
+
+### Currently Working
++ Clock
++ Pomodoro Timer 
++ Animated Gradient Background
+
+### Pending Integration
++ Notes 
++ Task Tracker
++ Calculator
+
+### In the works 
++ Spotify player
++ Google Calendar Widget
++ Weather 
+
+## Building Process
+Under the hood, the dashboard is a collection of individual working components
+
+## How to use
+
++ Clone the repository
++ Execute `npm run build`. This creates a build folder
++ Execute `npm install -g serve` if you do not have it installed already
++ Execute `serve -s build`. This will run the build in a local server.
 
 Screenshots: 
-
-![notes](https://user-images.githubusercontent.com/30232380/129585725-6e0ac2f8-9252-4e99-a77e-f7e14f248ffe.png)
-![calc](https://user-images.githubusercontent.com/30232380/129585740-a942676f-757b-4046-9453-fe64fbf4fe60.png)
 
 
 
