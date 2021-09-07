@@ -28,7 +28,8 @@ This dashboard has multiple widgets for different tasks
 + Weather 
 
 ## Building Process
-Under the hood, the dashboard is a collection of individual working components
+Under the hood, the dashboard is a collection of individual working components that encapsulate a widget. Some widgets require multiple components for better structure/formatting/sake of sanity. The directory structure represents this. 
+
 
 ## How to use
 
@@ -39,5 +40,5 @@ Under the hood, the dashboard is a collection of individual working components
 
 Screenshots: 
 
-
+![util](https://user-images.githubusercontent.com/30232380/132320651-7b8f6c23-19e0-4658-92f4-74c972652fe3.png)
 
