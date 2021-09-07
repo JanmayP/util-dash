@@ -10,7 +10,9 @@
 
 
 // GLOBAL VARS
-$mainBackground: linear-gradient(290deg, #a300a8, #4602b3);
+$colourA: #a300a8;
+$colourB:  #4602b3;
+$mainBackground: linear-gradient(290deg, $colourA, $colourB);
 
 $bodyFont: "Rubik";
 $headFont: 'Montserrat', sans-serif;
@@ -20,18 +22,18 @@ $headFont: 'Montserrat', sans-serif;
 body {
   background: $mainBackground;
   font-family: $bodyFont;
-  background-size: 200% 200%;
+  background-size: 400% 400%;
 	animation: gradient 10s ease infinite;
 }
 @keyframes gradient {
   0% {
-      background-position: 0% 50%;
+      background-position: 0% 0%;
   }
   50% {
-      background-position: 100% 50%;
+      background-position: 100% 0%;
   }
   100% {
-      background-position: 0% 50%;
+      background-position: 0% 0%;
   }
 }
 
@@ -57,7 +59,36 @@ body {
 .clock {
   font-family: $bodyFont;
   color: rgb(228, 211, 248);
-  font-size: 60px;
-  margin-top: -20px;
+  font-size: 50px;
+  margin-top: -10px;
   text-shadow: 3px 3px black;
+}
+
+// Container row 1
+.spotify {
+  color: white;
+}
+
+.timer{
+  color:white;
+
+  border-width: 2px;
+  border-style: solid;
+  border-color: $colourA $colourB $colourA $colourB;
+
+  padding: 30px;
+  width: 100px;
+  justify-content: center;
+  text-align: center;
+
+  p {
+    font-size: 30px;
+    text-shadow: 2px 2px black;
+  }
+
+  button{
+    background:none;
+    border: none;
+    cursor: pointer;
+  }
 }

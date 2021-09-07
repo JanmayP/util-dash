@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react'
 import './App.scss'
 
 import Clock from './components/Clock'
+// import Spotify from './components/Spotify'
+import Timer from './components/Timer'
 
 
 const App = () => {
@@ -23,7 +25,37 @@ const App = () => {
   }, []);
 
 
-  //
+  //timer function
+  let timerDuration = 60*25;
+  const [timeLeft, setTimeLeft] = useState(timerDuration);
+  const [timerActive, setTimerActive] = useState(false);
+
+  const startPomodoro = () => {
+    console.log("onCLICLKD@OI!KIJU!B!UBIJU!@");
+    if(!timerActive){
+      setTimerActive(true);
+    } else {
+      setTimerActive(false);
+      setTimeLeft(timerDuration);
+    }
+  }
+
+  useEffect (() => {
+    let interval = null;
+    if(timerActive && timeLeft !== 0){
+      interval = setInterval(
+        () => setTimeLeft(timeLeft - 1),
+        1000
+      );
+    } else if (!timerActive || timeLeft === 0){
+      clearInterval(interval);
+    }
+
+    return () => {
+      clearInterval(interval);
+    }
+
+  }, [timerActive, timeLeft]);
 
 
 
@@ -32,10 +64,11 @@ const App = () => {
       <div className="head-container">
         <div className="clock"><Clock time={time}/></div>
         <div className="greeting">Hello, Janmay</div>
-      </div>
+      </div><br></br><br></br>
       <div className="main-container">
-        <div>
-
+      <Timer timeLeft={timeLeft} startPomodoro={startPomodoro} />
+        <div className="container-one"> 
+          
         </div>
         <div>
 
