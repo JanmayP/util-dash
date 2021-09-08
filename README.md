@@ -8,19 +8,20 @@ I wanted to create a single dashboard to easily access all necessary tools from 
 + State Management / React Hooks
 + JavaScript/JSX 
 + Sass for styling 
++ React Draggable
 
 ## Features 
-This dashboard has multiple widgets for different tasks 
+This dashboard has multiple widgets for different tasks. All widgets are fully draggable across the viewport. 
 
 ### Currently Working
 + Clock
 + Pomodoro Timer 
++ Calculator
 + Animated Gradient Background
 
 ### Pending Integration
 + Notes 
 + Task Tracker
-+ Calculator
 
 ### In the works 
 + Spotify player

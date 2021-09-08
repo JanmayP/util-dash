@@ -2,9 +2,14 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import './App.scss'
 
+import Draggable from 'react-draggable'; // The default
+import {DraggableCore} from 'react-draggable'; // <DraggableCore>
+
 import Clock from './components/Clock'
-// import Spotify from './components/Spotify'
 import Timer from './components/Timer'
+import Calculator from './components/calculator/Calculator'
+import Keypad from './components/calculator/Keypad'
+import Result from './components/calculator/Result'
 
 
 const App = () => {
@@ -31,7 +36,6 @@ const App = () => {
   const [timerActive, setTimerActive] = useState(false);
 
   const startPomodoro = () => {
-    console.log("onCLICLKD@OI!KIJU!B!UBIJU!@");
     if(!timerActive){
       setTimerActive(true);
     } else {
@@ -47,7 +51,7 @@ const App = () => {
         () => setTimeLeft(timeLeft - 1),
         1000
       );
-    } else if (!timerActive || timeLeft === 0){
+    } else if (!timerActive || timeLeft===0){
       clearInterval(interval);
     }
 
@@ -56,6 +60,66 @@ const App = () => {
     }
 
   }, [timerActive, timeLeft]);
+
+  // Calculator functions 
+  const [result, setResult] = useState("0");
+  const [hitCalc, setHitCalc] = useState(false);
+
+  const onCalc = (button) => {
+    if (button === "="){
+      if(!hitCalc){
+        setHitCalc(true);
+        calculate();
+      }
+    }
+    else if (button === "CE"){
+      setHitCalc(false);
+      correct();
+    }
+    else if (button === "C"){
+      setHitCalc(false);
+      clear();
+    }   
+    else {
+      if(result === "0"){
+        setHitCalc(false);
+        setResult("" + button);
+      } else {
+        setHitCalc(false);
+        setResult(result + button);
+      }
+    }
+  }
+  const clear = () => {
+    setResult("0");
+  }
+  const correct = () => {
+    if (result.length === 1){
+      clear()
+    } else{
+      setResult(result.slice(0,-1));
+    }
+  }
+  const calculate = () => {
+    var compute = ''
+    if (result.includes('--')){
+      compute = result.replace('--','+');
+    }
+    else {
+      compute = result;
+    }
+    try {
+      let output = String(eval(compute));
+      if (output.length > 11){
+        setResult(output.substring(0,10));
+      } else {
+        setResult(output);
+      }
+
+    } catch (e) {
+      setResult("error");
+    }
+  }
 
 
 
@@ -66,16 +130,18 @@ const App = () => {
         <div className="greeting">Hello, Janmay</div>
       </div><br></br><br></br>
       <div className="main-container">
-      <Timer timeLeft={timeLeft} startPomodoro={startPomodoro} />
-        <div className="container-one"> 
-          
+      <Draggable>
+        <div className="timer-container"> 
+        <Timer timeLeft={timeLeft} startPomodoro={startPomodoro} />
         </div>
-        <div>
-
+      </Draggable>
+      <Draggable>
+        <div className="calculator-container">
+          <Result result={result} />
+          <br></br>
+          <Keypad onCalc={onCalc}/>
         </div>
-        <div>
-
-        </div>
+      </Draggable>
       </div>
     </div>
   )
