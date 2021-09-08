@@ -39,7 +39,8 @@ Under the hood, the dashboard is a collection of individual working components t
 + Execute `npm install -g serve` if you do not have it installed already
 + Execute `serve -s build`. This will run the build in a local server.
 
-Screenshots: 
+## Screenshots: 
 
-![util](https://user-images.githubusercontent.com/30232380/132320651-7b8f6c23-19e0-4658-92f4-74c972652fe3.png)
+![util](https://user-images.githubusercontent.com/30232380/132534048-b73cecba-e1ef-4b1e-a2de-09a478f8c620.png)
+
 
