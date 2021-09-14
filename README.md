@@ -19,7 +19,7 @@ This dashboard has multiple widgets for different tasks. All widgets are fully d
 + Calculator
 + Animated Gradient Background
 + Embedded YT Player
-+ Task Tracker (with local storage fucntionality)
++ Task Tracker (with local storage functionality)
 
 ### Pending Integration
 + Custom YT link functionality for player
@@ -41,6 +41,7 @@ Under the hood, the dashboard is a collection of individual working components t
 
 ## Screenshots: 
 
-![util](https://user-images.githubusercontent.com/30232380/132534048-b73cecba-e1ef-4b1e-a2de-09a478f8c620.png)
+![util](https://user-images.githubusercontent.com/30232380/133303045-03a89e0c-f05e-445b-b8c1-20ba428274d8.png)
+
 
 
