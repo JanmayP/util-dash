@@ -13,6 +13,7 @@
 // GLOBAL VARS
 $colourA: #a300a8;
 $colourB:  #4602b3;
+$colorBorder: rgb(239, 173, 255);
 $mainBackground: linear-gradient(290deg, $colourA, $colourB);
 
 $bodyFont: "Rubik";
@@ -89,9 +90,9 @@ body {
 .timer{
   color:white;
 
-  border-width: 2px;
+  border-width: 4px;
   border-style: solid;
-  border-color: $colourA ;
+  border-color: $colorBorder ;
   border-radius: 20px;
 
   padding: 25px;
@@ -114,9 +115,9 @@ body {
 
 // Calculator Component 
 .calculator-container {
-  border-width: 2px;
+  border-width: 4px;
   border-style: solid;
-  border-color: $colourA;
+  border-color: $colorBorder;
   border-radius: 20px;
 
   padding: 30px;
@@ -149,6 +150,104 @@ body {
       background-color: #4602b3;
     }
   }
+}
 
-  
+// Task Tracker
+
+.task-container {
+  border-width: 4px;
+  border-style: solid;
+  border-color: $colorBorder;
+  border-radius: 20px;
+
+  padding: 30px;
+  width: 350px;
+  justify-content: center;
+  text-align: center;
+
+  color: white;
+  font-size: 30px;
+}
+
+.taskText {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 23px;
+  text-align: left;
+}
+
+.taskBody{
+  text-align: left;
+  font-size: 18px;
+}
+
+// Add Tasks
+.addTask-container {
+  border-width: 3px;
+  border-style: solid;
+  border-color: $colorBorder;
+  border-radius: 20px;
+
+  padding: 20px;
+  width: 280px;
+  justify-content: center;
+  text-align: center;
+}
+
+.addTaskForm {
+  font-size: 20px;
+  color: white;
+  font-family: $calcFont;
+
+  input {
+    background: none;
+    border: 2px solid $colorBorder;
+    border-radius: 8px;
+    padding: 10px;
+    color: white;
+    font-size: 15px;
+    font-family: inherit;
+  }
+
+  .formBtn{
+    background: rgb(154, 102, 221);
+    color: white;
+    border: 2px solid $colorBorder;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: inherit;
+  }
+
+  #infoBox {
+    height: 40px;
+  }
+
+}
+
+.task {
+  line-height: 120%;
+  font-size: 18px;
+  font-style: normal;
+
+}
+
+// Youtube Player
+.youtube-player{
+  border-width: 4px;
+  border-style: solid;
+  border-color: $colorBorder;
+  border-radius: 20px;
+
+  padding: 20px;
+  width: 560px;
+  height: 310px;
+  justify-content: center;
+  text-align: center;
+
+  color: white;
+  text-shadow: 2px 2px black;
+  font-size: 30px;
 }

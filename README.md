@@ -18,10 +18,11 @@ This dashboard has multiple widgets for different tasks. All widgets are fully d
 + Pomodoro Timer 
 + Calculator
 + Animated Gradient Background
++ Embedded YT Player
++ Task Tracker (with local storage fucntionality)
 
 ### Pending Integration
-+ Notes 
-+ Task Tracker
++ Custom YT link functionality for player
 
 ### In the works 
 + Spotify player
@@ -30,7 +31,6 @@ This dashboard has multiple widgets for different tasks. All widgets are fully d
 
 ## Building Process
 Under the hood, the dashboard is a collection of individual working components that encapsulate a widget. Some widgets require multiple components for better structure/formatting/sake of sanity. The directory structure represents this. 
-
 
 ## How to use
 
