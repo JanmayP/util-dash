@@ -1,7 +1,7 @@
 # Utility Dashboard created in React (WIP)
 
 ## Purpose
-I wanted to create a single dashboard to easily access all necessary tools from one place rather than having multiple windows open on my desktop. Along the way, I am constantly improving on my React skills. It also has the added benefit of looking cool :)
+I wanted to create a single dashboard to easily access all necessary tools from one place rather than having multiple windows open on my desktop. Along the way, I am constantly improving on my React skills.
 
 ## Technologies and Methods used
 + React js
