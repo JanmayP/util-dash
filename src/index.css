@@ -1,33 +1,13 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
-
 body {
-  background: linear-gradient(290deg, #55008a, #4602b3);
-  font-family: "Rubik";
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.App {
-  margin-left: 50px;
-  margin-right: 50px;
-  margin-top: 50px;
-}
-
-/* Head container */
-
-.head-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.greeting {
-  font-family: 'Montserrat', sans-serif;
-  color: white;
-  font-size: 40px;
-  text-shadow: 2px 2px black;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
