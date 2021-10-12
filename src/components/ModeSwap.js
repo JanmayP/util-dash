@@ -6,7 +6,7 @@ const ModeSwap = ({changeMode, mode}) => {
 
   return (
     <button className="mode-swap" onClick={changeMode}>
-      {!mode ? <BsFillSunFill size={20}/>
+      {mode ? <BsFillSunFill size={20}/>
       : <BsFillMoonFill size={20}/> }
     </button>
   )

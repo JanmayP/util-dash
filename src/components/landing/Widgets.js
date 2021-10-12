@@ -5,13 +5,25 @@ const Widgets = () => {
     <div className="widgets-container">
       <h3>OR Build your own Dash:</h3>
       <div className="widget"> 
-        aa
+        Pomodoro 
       </div>
       <div className="widget"> 
-        bb
+        Calculator
       </div>
       <div className="widget"> 
-        cc
+        Task Tracker
+      </div>
+      <div className="widget"> 
+        Spotify Player
+      </div>
+      <div className="widget"> 
+        YouTube Player
+      </div>
+      <div className="widget"> 
+        Weather
+      </div>
+      <div className="widget"> 
+        Calendar
       </div>
     </div>
   )

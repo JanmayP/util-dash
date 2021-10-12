@@ -7,11 +7,13 @@ $bodyFont: 'Quicksand', sans-serif;
 }
 
 .mode-swap {
+  height: 40px;
+  width: 40px;
   position: fixed;
-  top: 25px;
-  right: 25px;
-
-  padding: 8px;
-  border: 2px solid black;
+  z-index: 1;
+  right: 1.25vw;
+  top: 1.25vw;
+  padding: 5px;
+  border: 1px solid black;
   border-radius: 10px;
 }

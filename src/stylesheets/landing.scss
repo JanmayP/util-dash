@@ -6,7 +6,7 @@ $bodyFont: 'Quicksand', sans-serif;
   text-align: center;
   font-size: 6vh;
   padding: 25px;
-  margin: 10vh;
+  margin: 20vh 0 0 0;
 }
 
 .user-input {
@@ -15,10 +15,11 @@ $bodyFont: 'Quicksand', sans-serif;
   height: 8vh;
   font-family: $bodyFont;
   color: black;
+  background: none;
   font-size: 4vh;
   transform: translate(0,-1vh);
   border: none;
-  border-bottom: 2px solid aqua;
+  border-bottom: 2px solid #44bcec;
   cursor: pointer;
   &:focus {
     outline: none;
@@ -32,7 +33,33 @@ $bodyFont: 'Quicksand', sans-serif;
   display: flex;
   flex-direction: column;
   text-align: center;
+  gap: 50px;
   font-family: $bodyFont;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  text-align: center;
+  align-items: center;
+  gap: 5px;
+  
+  position: fixed;
+  padding: 2.5vh 2.5vh 2.5vh 5vh ;
+
+  width: 100vw;
+  border-bottom: 2px solid black;
+  background: #084C61;
+  color: white;
+  
+  span {
+    font-size: 30px;
+  }
+
+  .react-made {
+    font-size: 15px;
+  }
 }
 
 // Router Link
@@ -46,26 +73,29 @@ $bodyFont: 'Quicksand', sans-serif;
   max-width: 10vw;
   margin: auto;
   
-  border: 3px solid aqua;
+  border: 3px solid #44bcec;
   border-radius: 15px;
-  background: white;
+  background: #44bcec;
   padding: 15px;
 }
 
 .router-link:hover {
-  background: aqua;
-  color: white;
+  background: white;
+  color: black;
   box-shadow: 10px 11px 55px 5px rgba(0,0,0,0.35);
+  transition: 0.45s;
 }
 
+.router-link-container {
+  margin: 50px 0 50px 0;
+}
 
 // PRESETS
 .presets-container {
   display: flex;
   flex-direction: row;
-  justify-content: left;
-  margin-left: 10vw;
-  gap: 5vw;
+  justify-content: space-between;
+  margin: 0 20vw;
 
   h3 {
     align-self: center;
@@ -76,7 +106,10 @@ $bodyFont: 'Quicksand', sans-serif;
   border: 2px solid black;
   padding: 20px;
   border-radius: 8px;
-  width: 200px;
+  width: 140px;
+  height: 140px;
+  background: #78E3FD;
+  color: black;
 
   &:hover {
     box-shadow: 10px 11px 55px 5px rgba(0,0,0,0.35);
@@ -89,15 +122,19 @@ $bodyFont: 'Quicksand', sans-serif;
 .widgets-container {
   display: flex;
   flex-direction: row;
-  justify-content: left;
-  margin: 10vw;
-  gap: 5vw;
+  justify-content: center;
+  gap: 10px;
 }
 
 .widget {
   border: 2px solid black;
   padding: 20px;
   border-radius: 8px;
+  background: #78E3FD;
+  color: black;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
 
   &:hover {
     box-shadow: 10px 11px 55px 5px rgba(0,0,0,0.35);
@@ -108,18 +145,26 @@ $bodyFont: 'Quicksand', sans-serif;
 .themes-container {
   display: flex;
   flex-direction: row;
-  justify-content: left;
-  margin: 10vw;
+  justify-content: center;
   gap: 5vw;
+  margin: 0 20vw;
 }
 
 .theme {
   border: 2px solid black;
   padding: 20px;
   border-radius: 8px;
+  background: #78E3FD;
+  color: black;
+  justify-content: center;
 
   &:hover {
-    box-shadow: 10px 11px 55px 5px rgba(0,0,0,0.35);
+    box-shadow: 10px 11px 55px 5px rgba(0, 0, 0, 0.8);
+  }
+
+  img {
+    height: 120px;
+    width: 120px;
   }
 }
 
