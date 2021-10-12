@@ -1,25 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import './stylesheets/App.scss';
+import './stylesheets/landing.scss'
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { useState } from 'react' 
+
+// Component Imports 
+import Landing from './components/landing/Landing';
+import Dash from './components/dash/Dash'
 
 function App() {
+
+  // Theme State
+  // const [pageTheme, setPageTheme] = useState({
+  //   colorBG: "white",
+  //   colorA: "aqua",
+  //   colorB: "darkblue",
+  //   darkMode: false
+  // })
+
+  // Dark Mode State
+  const [darkMode, setDarkMode] = useState(false)
+
+  // Set Background Color depending on state
+  let colorBG
+  !darkMode ? colorBG = "white" : colorBG = "grey"  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <Landing colorBG={ colorBG }>
+          </Landing>
+        </Route>
+
+        <Route path="/home">
+            <Dash>
+            </Dash> 
+        </Route>
+      </Switch>
+    </Router>
   );
 }
+
 
 export default App;

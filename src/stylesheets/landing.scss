@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
+
+$bodyFont: 'Quicksand', sans-serif;
+
+.container {
+  text-align: center;
+  font-size: 6vh;
+  padding: 25px;
+  margin: 10vh;
+}
+
+.user-input {
+  text-align: center;
+  width: 250px;
+  height: 8vh;
+  font-family: $bodyFont;
+  color: black;
+  font-size: 4vh;
+  transform: translate(0,-1vh);
+  border: none;
+  border-bottom: 2px solid aqua;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+}
+
+.landing-page {
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: $bodyFont;
+}
+
+// Router Link
+
+.router-link{
+  color: black;
+  text-decoration: none;
+  font-size: 3vh;
+  cursor: pointer;
+  min-width: 5vw;
+  max-width: 10vw;
+  margin: auto;
+  
+  border: 3px solid aqua;
+  border-radius: 15px;
+  background: white;
+  padding: 15px;
+}
+
+.router-link:hover {
+  background: aqua;
+  color: white;
+  box-shadow: 10px 11px 55px 5px rgba(0,0,0,0.35);
+}
+
+
+// PRESETS
+.presets-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  margin-left: 10vw;
+  gap: 5vw;
+
+  h3 {
+    align-self: center;
+  }
+}
+
+.preset {
+  border: 2px solid black;
+  padding: 20px;
+  border-radius: 8px;
+  width: 200px;
+
+  &:hover {
+    box-shadow: 10px 11px 55px 5px rgba(0,0,0,0.35);
+  }
+
+  cursor: pointer;
+}
+
+// WIDGETS
+.widgets-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  margin: 10vw;
+  gap: 5vw;
+}
+
+.widget {
+  border: 2px solid black;
+  padding: 20px;
+  border-radius: 8px;
+
+  &:hover {
+    box-shadow: 10px 11px 55px 5px rgba(0,0,0,0.35);
+  }
+}
+
+// THEMES
+.themes-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  margin: 10vw;
+  gap: 5vw;
+}
+
+.theme {
+  border: 2px solid black;
+  padding: 20px;
+  border-radius: 8px;
+
+  &:hover {
+    box-shadow: 10px 11px 55px 5px rgba(0,0,0,0.35);
+  }
+}
+

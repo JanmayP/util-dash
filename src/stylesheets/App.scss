@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
+
+$bodyFont: 'Quicksand', sans-serif;
+
+.body {
+  font-family: $bodyFont;
+}
+
+.mode-swap {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+
+  padding: 8px;
+  border: 2px solid black;
+  border-radius: 10px;
+}
