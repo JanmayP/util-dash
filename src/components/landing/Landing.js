@@ -31,7 +31,6 @@ const Landing = () => {
   const [globalProfile, setGlobalProfile] = useState ({
     id: 0, 
     widgets: {
-      timer: false,
       pomodoro: false,
       calculator: false, 
       tasks: false,
@@ -39,46 +38,12 @@ const Landing = () => {
       youtube: false, 
       weather: false,
       calendar: false
-    }
-  })
+    }})
 
-  const productivityProfile = {
-    id: 1, 
-    widgets: {
-      pomodoro: false,
-      calculator: true, 
-      tasks: true,
-      spotify: false,
-      youtube: false, 
-      weather: true,
-      calendar: true
-    }
-  }
-
-  const studyProfile = {
-    id: 2, 
-    widgets: {
-      pomodoro: true,
-      calculator: false, 
-      tasks: true,
-      spotify: true,
-      youtube: false, 
-      weather: false,
-      calendar: true
-    }
-  }
-
-  const relaxProfile = {
-    id: 3, 
-    widgets: {
-      pomodoro: false,
-      calculator: false, 
-      tasks: false,
-      spotify: true,
-      youtube: true, 
-      weather: true,
-      calendar: false
-    }
+  const presetWidgets = (widgets, id) => {
+    widgets.forEach((widget) => {
+      changeWidgets(widget)
+    })
   }
 
   const selectPreset = (e) => {
@@ -101,17 +66,19 @@ const Landing = () => {
     }
     //Find Preset Div to change color
     if (presetDiv.id === "productivity") {
-      setGlobalProfile(productivityProfile)
-      console.log("changing state")
+      globalProfile.id = 1
+      presetWidgets(["calculator", "tasks", "weather", "calendar"])
     } else if (presetDiv.id === "study") {
-      setGlobalProfile(studyProfile)
+      globalProfile.id = 2
+      presetWidgets(["pomodoro", "tasks", "spotify", "calendar"])
     } else if (presetDiv.id === "relax") {
-      setGlobalProfile(relaxProfile)
+      globalProfile.id = 3
+      presetWidgets(["weather", "youtube", "spotify"])
     }
     presetDiv = document.getElementById(presetDiv.id)
+    presetDiv.style.color = "white"
     presetDiv.style.background = "#084C61"
   }
-
 
   // State and Theme Objects
   const [globalTheme, setGlobalTheme] = useState({
@@ -169,19 +136,85 @@ const Landing = () => {
       setGlobalTheme(themeGreen)
     }
     themeDiv = document.getElementById(themeDiv.id)
+    themeDiv.style.color = "white"
     themeDiv.style.background = "#084C61"
   }
 
-  // Save Preset and Theme to LS
-  const savePreferences = () => {
-      const dashPreferences = {
-        profile: globalProfile, 
-        theme: globalTheme
-      }
-      console.log(dashPreferences.profile.id)
-      localStorage.setItem("preferences", JSON.stringify(dashPreferences))
+  // Function to select widget
+  const changeWidgets = (widgetName) => {
+    let tempDiv 
+    tempDiv = document.getElementById(widgetName)
+    if (!globalProfile.widgets[widgetName]) {
+      tempDiv.style.color = "white"
+      tempDiv.style.background = "#084C61"
+      globalProfile.widgets[widgetName] = true
+      setGlobalProfile(globalProfile)
+    } else {
+      tempDiv.style.color = "black"
+      tempDiv.style.background = "#78E3FD"
+      globalProfile.widgets[widgetName] = false
+      setGlobalProfile(globalProfile)
+    }
   }
-  
+
+  const unselectPresets = () => {
+    let tempDiv
+    if (globalProfile.id !== 4) {
+      tempDiv = document.getElementById("productivity")
+      tempDiv.style.background = "#78E3FD"
+      tempDiv = document.getElementById("study")
+      tempDiv.style.background = "#78E3FD"
+      tempDiv = document.getElementById("relax")
+      tempDiv.style.background = "#78E3FD"
+    }
+  }
+
+  const selectWidgets = (e) => {
+    unselectPresets()
+    globalProfile.id = 4
+    
+    let widgetDiv = e.target
+    switch(widgetDiv.id) {
+      case "pomodoro": 
+        changeWidgets("pomodoro")
+        break;
+      case "calculator": 
+        changeWidgets("calculator")
+        break;
+      case "tasks": 
+        changeWidgets("tasks")
+        break;          
+      case "spotify": 
+        changeWidgets("spotify")
+        break;
+      case "youtube": 
+        changeWidgets("youtube")
+        break;
+      case "weather": 
+        changeWidgets("weather")
+        break;
+      case "calendar": 
+        changeWidgets("calendar")
+        break;
+      default: break;
+    }
+  }
+  // Save Preset and Theme to LS
+  const savePreferences = (e) => {
+    let userName = document.getElementById("username").value
+    if (!userName) {
+      alert("Please enter a username")
+      e.preventDefault()
+      return
+    }
+    const dashPreferences = {
+      user: userName,
+      profile: globalProfile, 
+      theme: globalTheme
+    }
+    console.log(dashPreferences)
+    localStorage.setItem("preferences", JSON.stringify(dashPreferences))
+  }
 
   return (
     <div className="landing-page" style={{background: bodyBG, color: bodyText}}>
@@ -190,10 +223,10 @@ const Landing = () => {
       </div>
       <ModeSwap mode={darkMode} changeMode={changeMode}/>
       <div className="container" >
-        Welcome, <input type="text" className="user-input" autoFocus style={{color:bodyText}} ></input> !
+        Welcome, <input type="text" className="user-input" id="username" autoFocus style={{color:bodyText}} ></input> !
       </div>
       <Presets selectPreset={selectPreset}/>
-      <Widgets/>
+      <Widgets selectWidgets={selectWidgets}/>
       <Themes selectTheme={selectTheme}/>
       <div className="router-link-container">
         <Link to="/home" className="router-link" onClick={savePreferences}>Setup Dash <AiOutlineArrowRight size={20}></AiOutlineArrowRight> </Link>
