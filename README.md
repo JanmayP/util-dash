@@ -1,27 +1,26 @@
 # Utility Dashboard created in React (WIP)
 
-## Live Site 
 Live Version of the app: https://happy-hypatia-bab022.netlify.app/
 
 Widget Dashboard that allows users to customise their dash with presets, widgets, and themes. 
 
-## Technologies used
+### Technologies used
 + Reactjs
 + React Router
 + JavaScript/JSX 
 + Sass 
 
-## Functionality
+### Functionality
 
 Dash homepage is currently under construction. 
 
-Widgets currently working: 
+#### Widgets currently working: 
 + Pomodoro
 + Calculator 
 + Task Tracker 
 + YouTube Player
 
-Widgets in the works: 
+#### Widgets in the works: 
 + Spotify Player
 + Weather
 + Calendar
