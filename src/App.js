@@ -1,5 +1,6 @@
 import './stylesheets/App.scss';
 import './stylesheets/landing.scss'
+import './stylesheets/dash.scss'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 // Component Imports 

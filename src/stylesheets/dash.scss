@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+$bodyFont: 'Quicksand', sans-serif;
+$clockFont: 'Roboto', sans-serif;;
+
+body{ 
+  margin: 0;
+  font-family: $bodyFont;
+  overflow-x: hidden;
+}
+
+.header-dash {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 2.5vh 2.5vh 2.5vh 5vh ;
+
+  width: 100vw;
+  border-bottom: 2px solid rgb(0, 0, 0);
+  background: #084C61;
+  color: white;
+  
+  span {
+    font-size: 1.74rem;
+  }
+}
+
+.dash {
+  display: flex;
+  flex-direction: column;
+}
+
+.clock {
+  font-size: 2rem;
+}
+
+.username {
+  font-size: 1.75rem;
+}
+
+.header-body { 
+  margin: 0;
+  display: flex;
+  height: auto;
+  width: 100vw;
+}
+
+.sidebar {
+  border-right: solid 2px rgb(107, 107, 107);
+  width: 12.5vw;
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  text-align: center;
+  padding: 2.5vh ;
+}
+
+.sidebar-footer{
+  font-size: 16px;
+}
+
+.main-body {
+  padding: 5vh;
+  display: flex;
+  flex-direction: column;
+  gap: 75px;
+}
+
+.body-row {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.widget-container {
+  
+  border: 1px solid rgb(107, 107, 107);
+  border-radius: 12px;
+  color: black;
+}
+
+.timer-container {
+  padding: 15px;
+  width: 150px;
+  height: 150px;
+}
+
+.timer {
+  justify-content: center;
+  text-align: center;
+
+  p {
+    font-size: 30px;
+  }
+
+  button{
+    background:none;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.calculator-container {
+  border: 1px solid rgb(107, 107, 107);
+  border-radius: 12px;
+  color: black;
+
+  padding: 30px;
+  height: 300px;
+  width: 200px;
+  justify-content: center;
+  text-align: center;
+
+
+  .result{
+    text-align: right;
+    padding-right: 10px;
+    color: black;
+    font-size: 30px;
+  }
+
+  .button {
+    button {
+      height: 50px;
+      width: 50px;
+      font-size: 20px;
+      font-weight: bold;
+      font-family: $bodyFont;
+    }
+    .calcFR {
+      color: black;
+    }
+  }
+}
+
+.task-container {
+  height: auto;
+  width: 400px;
+  padding: 30px;
+  font-size: 20px;
+}
+
+.addTask-container {
+  height: auto;
+  width: 200px;
+  padding: 20px;
+}
+
+.showAddTask {
+  width: 100%;
+  height: 40px;
+  font-size: 18px;
+  padding: 5px;
+  border: 1px solid  black;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(0.97);
+    box-shadow: 2px 2px rgb(173, 172, 172);
+    
+  }
+}
+
+.task {
+  border-bottom: 1px solid black;
+  
+  .taskText {
+    font-size: 22px;
+  }
+
+  .removeTask {
+    cursor: pointer;
+  }
+
+  p {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.addTaskForm {
+  p {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 22px;
+  }
+
+  .form {
+    margin: 20px 0;
+    input {
+      width: 100%;
+      margin: 5px 0;
+    }
+  }
+
+  .formBtn {
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    padding: 5px;
+    border: 1px solid  black;
+    border-radius: 6px;
+    color: black;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(0.97);
+      box-shadow: 2px 2px rgb(173, 172, 172);
+    }
+  }
+}
+
+.removeTask {
+  cursor: pointer;
+}
